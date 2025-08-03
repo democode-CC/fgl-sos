@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect x="10" y="10" width="180" height="180" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="5"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#f0f0f0" stroke-width="0.5">
+    <!-- Horizontal grid lines -->
+    <line x1="30" y1="40" x2="170" y2="40"/>
+    <line x1="30" y1="70" x2="170" y2="70"/>
+    <line x1="30" y1="100" x2="170" y2="100"/>
+    <line x1="30" y1="130" x2="170" y2="130"/>
+    <line x1="30" y1="160" x2="170" y2="160"/>
+    
+    <!-- Vertical grid lines -->
+    <line x1="50" y1="30" x2="50" y2="170"/>
+    <line x1="80" y1="30" x2="80" y2="170"/>
+    <line x1="110" y1="30" x2="110" y2="170"/>
+    <line x1="140" y1="30" x2="140" y2="170"/>
+  </g>
+  
+  <!-- Axes -->
+  <line x1="30" y1="170" x2="170" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="30" y1="30" x2="30" y2="170" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Historical data points -->
+  <g fill="#3498db" stroke="#2980b9" stroke-width="2">
+    <circle cx="50" cy="140" r="4"/>
+    <circle cx="70" cy="120" r="4"/>
+    <circle cx="90" cy="110" r="4"/>
+    <circle cx="110" cy="90" r="4"/>
+  </g>
+  
+  <!-- Historical line (solid) -->
+  <polyline points="50,140 70,120 90,110 110,90" 
+            stroke="#3498db" stroke-width="3" fill="none"/>
+  
+  <!-- Dividing line between historical and predicted -->
+  <line x1="110" y1="30" x2="110" y2="170" stroke="#7f8c8d" stroke-width="1" stroke-dasharray="5,5" opacity="0.5"/>
+  
+  <!-- Predicted line (dashed) -->
+  <polyline points="110,90 130,75 150,65 170,60" 
+            stroke="#e74c3c" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+  
+  <!-- Confidence interval (shaded area) -->
+  <path d="M 110,90 L 130,75 L 150,65 L 170,60 L 170,70 L 150,78 L 130,88 L 110,100 Z" 
+        fill="#e74c3c" opacity="0.2"/>
+  <path d="M 110,90 L 130,75 L 150,65 L 170,60 L 170,50 L 150,52 L 130,62 L 110,80 Z" 
+        fill="#e74c3c" opacity="0.2"/>
+  
+  <!-- Confidence interval boundaries (dotted) -->
+  <polyline points="110,80 130,62 150,52 170,50" 
+            stroke="#e74c3c" stroke-width="1" fill="none" stroke-dasharray="2,2" opacity="0.6"/>
+  <polyline points="110,100 130,88 150,78 170,70" 
+            stroke="#e74c3c" stroke-width="1" fill="none" stroke-dasharray="2,2" opacity="0.6"/>
+  
+  <!-- Predicted data points -->
+  <g fill="none" stroke="#e74c3c" stroke-width="2">
+    <circle cx="130" cy="75" r="4" stroke-dasharray="3,2"/>
+    <circle cx="150" cy="65" r="4" stroke-dasharray="3,2"/>
+    <circle cx="170" cy="60" r="4" stroke-dasharray="3,2"/>
+  </g>
+  
+  <!-- Legend -->
+  <g transform="translate(35, 15)">
+    <!-- Historical -->
+    <line x1="0" y1="5" x2="20" y2="5" stroke="#3498db" stroke-width="3"/>
+    <circle cx="10" cy="5" r="3" fill="#3498db"/>
+    <text x="25" y="8" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Historical</text>
+    
+    <!-- Predicted -->
+    <line x1="70" y1="5" x2="90" y2="5" stroke="#e74c3c" stroke-width="3" stroke-dasharray="8,4"/>
+    <circle cx="80" cy="5" r="3" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="3,2"/>
+    <text x="95" y="8" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Predicted</text>
+  </g>
+  
+  <!-- Axis labels -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">Time</text>
+  <text x="15" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d" transform="rotate(-90, 15, 100)">Value</text>
+  
+  <!-- Prediction indicator arrow -->
+  <defs>
+    <marker id="pred-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+    </marker>
+  </defs>
+  <path d="M 115,85 L 125,78" stroke="#e74c3c" stroke-width="2" marker-end="url(#pred-arrow)"/>
+  
+  <!-- R² or accuracy indicator -->
+  <g transform="translate(140, 140)">
+    <rect x="-15" y="-8" width="30" height="16" fill="#27ae60" rx="8" opacity="0.9"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="white" font-weight="bold">R²=0.92</text>
+  </g>
+</svg>

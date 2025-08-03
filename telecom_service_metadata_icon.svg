@@ -73,7 +73,4 @@
   <!-- Flow indicators -->
   <path d="M 70 70 Q 85 85, 85 95" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
   <path d="M 130 70 Q 115 85, 115 95" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
-  
-  <!-- Service label -->
-  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">Service Metadata</text>
 </svg>

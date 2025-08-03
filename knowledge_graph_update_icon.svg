@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Existing Knowledge Graph Edges (faded) -->
+  <g stroke="#c8ced3" stroke-width="1.5" fill="none" opacity="0.6">
+    <!-- Central connections -->
+    <line x1="100" y1="50" x2="100" y2="100"/>
+    <line x1="100" y1="100" x2="100" y2="150"/>
+    <line x1="100" y1="100" x2="50" y2="100"/>
+    <line x1="100" y1="100" x2="150" y2="100"/>
+    
+    <!-- Diagonal connections -->
+    <line x1="100" y1="100" x2="65" y2="65"/>
+    <line x1="100" y1="100" x2="135" y2="65"/>
+    <line x1="100" y1="100" x2="65" y2="135"/>
+    <line x1="100" y1="100" x2="135" y2="135"/>
+    
+    <!-- Outer connections -->
+    <line x1="100" y1="50" x2="65" y2="65"/>
+    <line x1="100" y1="50" x2="135" y2="65"/>
+    <line x1="50" y1="100" x2="65" y2="65"/>
+    <line x1="50" y1="100" x2="65" y2="135"/>
+    <line x1="150" y1="100" x2="135" y2="65"/>
+    <line x1="150" y1="100" x2="135" y2="135"/>
+    <line x1="100" y1="150" x2="65" y2="135"/>
+    <line x1="100" y1="150" x2="135" y2="135"/>
+  </g>
+  
+  <!-- New/Updated Edges (highlighted) -->
+  <g stroke="#28a745" stroke-width="3" fill="none">
+    <!-- New connections with animation -->
+    <line x1="65" y1="65" x2="135" y2="65" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" from="10" to="0" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="65" y1="135" x2="135" y2="135" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" from="10" to="0" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <!-- New node connections -->
+    <line x1="135" y1="65" x2="160" y2="40" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" from="10" to="0" dur="2s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Existing Knowledge Graph Nodes (faded) -->
+  <!-- Central node -->
+  <circle cx="100" cy="100" r="12" fill="#6c9bd1" stroke="#5a82b8" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Primary nodes -->
+  <circle cx="100" cy="50" r="10" fill="#9775fa" stroke="#7950f2" stroke-width="2" opacity="0.7"/>
+  <circle cx="100" cy="150" r="10" fill="#9775fa" stroke="#7950f2" stroke-width="2" opacity="0.7"/>
+  <circle cx="50" cy="100" r="10" fill="#9775fa" stroke="#7950f2" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Secondary nodes -->
+  <circle cx="65" cy="65" r="8" fill="#63e6be" stroke="#38d9a9" stroke-width="2" opacity="0.7"/>
+  <circle cx="65" cy="135" r="8" fill="#63e6be" stroke="#38d9a9" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Updated/Modified Nodes -->
+  <!-- Modified node with update indicator -->
+  <circle cx="150" cy="100" r="10" fill="#ffc107" stroke="#ff8800" stroke-width="3"/>
+  <circle cx="135" cy="65" r="8" fill="#ffc107" stroke="#ff8800" stroke-width="3"/>
+  <circle cx="135" cy="135" r="8" fill="#ffc107" stroke="#ff8800" stroke-width="3"/>
+  
+  <!-- New Node (with pulse animation) -->
+  <circle cx="160" cy="40" r="10" fill="#28a745" stroke="#1e7e34" stroke-width="2">
+    <animate attributeName="r" values="10;12;10" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0.8;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Update indicators -->
+  <!-- Plus sign for new node -->
+  <g transform="translate(160, 40)">
+    <circle r="6" fill="white"/>
+    <path d="M -3,0 L 3,0 M 0,-3 L 0,3" stroke="#28a745" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Update badges for modified nodes -->
+  <g transform="translate(150, 100)">
+    <circle cx="6" cy="-6" r="5" fill="#dc3545"/>
+    <text x="6" y="-3" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="white" font-weight="bold">!</text>
+  </g>
+  
+  <!-- Sync/Update icon in corner -->
+  <g transform="translate(170, 25)">
+    <circle r="15" fill="white" stroke="#28a745" stroke-width="2"/>
+    <path d="M -5,-5 A 7,7 0 1,1 5,-5 L 5,-2 L 8,-5 L 5,-8 L 5,-5" 
+          fill="none" stroke="#28a745" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- Update summary badge -->
+  <g transform="translate(100, 175)">
+    <rect x="-30" y="-8" width="60" height="16" fill="#28a745" rx="8"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="white" font-weight="bold">+1 new, 3 updated</text>
+  </g>
+</svg>

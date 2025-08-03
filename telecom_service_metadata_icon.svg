@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f0f4f8" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Central antenna/tower -->
+  <g transform="translate(100, 100)">
+    <!-- Tower base -->
+    <rect x="-8" y="-20" width="16" height="40" fill="#34495e"/>
+    <!-- Tower signals -->
+    <path d="M -30 -35 Q -15 -40, 0 -35" fill="none" stroke="#3498db" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 30 -35 Q 15 -40, 0 -35" fill="none" stroke="#3498db" stroke-width="3" stroke-linecap="round"/>
+    <path d="M -40 -45 Q -20 -52, 0 -45" fill="none" stroke="#2980b9" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    <path d="M 40 -45 Q 20 -52, 0 -45" fill="none" stroke="#2980b9" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- Network nodes -->
+  <circle cx="40" cy="60" r="15" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="160" cy="60" r="15" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="40" cy="140" r="15" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="160" cy="140" r="15" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  
+  <!-- Connection lines -->
+  <line x1="55" y1="60" x2="85" y2="80" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="145" y1="60" x2="115" y2="80" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="55" y1="140" x2="85" y2="120" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,5"/>
+  <line x1="145" y1="140" x2="115" y2="120" stroke="#7f8c8d" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Metadata symbols -->
+  <!-- Data tag 1 -->
+  <g transform="translate(40, 60)">
+    <rect x="-10" y="-7" width="20" height="14" fill="white" rx="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">5G</text>
+  </g>
+  
+  <!-- Data tag 2 -->
+  <g transform="translate(160, 60)">
+    <rect x="-10" y="-7" width="20" height="14" fill="white" rx="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">QoS</text>
+  </g>
+  
+  <!-- Data tag 3 -->
+  <g transform="translate(40, 140)">
+    <rect x="-12" y="-7" width="24" height="14" fill="white" rx="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">SLA</text>
+  </g>
+  
+  <!-- Data tag 4 -->
+  <g transform="translate(160, 140)">
+    <rect x="-12" y="-7" width="24" height="14" fill="white" rx="2"/>
+    <text x="0" y="3" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">KPI</text>
+  </g>
+  
+  <!-- Central database/metadata storage -->
+  <g transform="translate(100, 100)">
+    <ellipse cx="0" cy="15" rx="25" ry="8" fill="#16a085" stroke="#138871" stroke-width="2"/>
+    <rect x="-25" y="15" width="50" height="20" fill="#16a085"/>
+    <ellipse cx="0" cy="35" rx="25" ry="8" fill="#16a085" stroke="#138871" stroke-width="2"/>
+    <!-- Database lines -->
+    <line x1="-20" y1="20" x2="-20" y2="30" stroke="#138871" stroke-width="1"/>
+    <line x1="-10" y1="20" x2="-10" y2="30" stroke="#138871" stroke-width="1"/>
+    <line x1="0" y1="20" x2="0" y2="30" stroke="#138871" stroke-width="1"/>
+    <line x1="10" y1="20" x2="10" y2="30" stroke="#138871" stroke-width="1"/>
+    <line x1="20" y1="20" x2="20" y2="30" stroke="#138871" stroke-width="1"/>
+  </g>
+  
+  <!-- Metadata flow arrows -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db"/>
+    </marker>
+  </defs>
+  
+  <!-- Flow indicators -->
+  <path d="M 70 70 Q 85 85, 85 95" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <path d="M 130 70 Q 115 85, 115 95" fill="none" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)" opacity="0.6"/>
+  
+  <!-- Service label -->
+  <text x="100" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">Service Metadata</text>
+</svg>

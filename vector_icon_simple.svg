@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Vector array representation -->
+  <g transform="translate(100, 100)">
+    <!-- Main vector container -->
+    <rect x="-15" y="-60" width="30" height="120" fill="#e8f5e9" stroke="#27ae60" stroke-width="3" rx="4"/>
+    
+    <!-- Array brackets -->
+    <path d="M -15,-60 L -20,-60 L -20,60 L -15,60" fill="none" stroke="#27ae60" stroke-width="3" stroke-linecap="round"/>
+    <path d="M 15,-60 L 20,-60 L 20,60 L 15,60" fill="none" stroke="#27ae60" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Vector elements as bars -->
+    <rect x="-10" y="-50" width="20" height="4" fill="#3498db" rx="2"/>
+    <rect x="-10" y="-40" width="20" height="4" fill="#e74c3c" rx="2"/>
+    <rect x="-10" y="-30" width="20" height="4" fill="#f39c12" rx="2"/>
+    <rect x="-10" y="-20" width="20" height="4" fill="#9b59b6" rx="2"/>
+    <rect x="-10" y="-10" width="20" height="4" fill="#27ae60" rx="2"/>
+    <rect x="-10" y="0" width="20" height="4" fill="#3498db" rx="2"/>
+    <rect x="-10" y="10" width="20" height="4" fill="#e74c3c" rx="2"/>
+    <rect x="-10" y="20" width="20" height="4" fill="#f39c12" rx="2"/>
+    
+    <!-- Ellipsis dots -->
+    <circle cx="-5" cy="35" r="2" fill="#7f8c8d"/>
+    <circle cx="0" cy="35" r="2" fill="#7f8c8d"/>
+    <circle cx="5" cy="35" r="2" fill="#7f8c8d"/>
+    
+    <!-- Last element -->
+    <rect x="-10" y="46" width="20" height="4" fill="#9b59b6" rx="2"/>
+  </g>
+  
+  <!-- 3D vector space visualization -->
+  <g transform="translate(60, 60)">
+    <!-- 3D axes -->
+    <line x1="0" y1="0" x2="25" y2="0" stroke="#e74c3c" stroke-width="2" opacity="0.5"/>
+    <line x1="0" y1="0" x2="0" y2="25" stroke="#3498db" stroke-width="2" opacity="0.5"/>
+    <line x1="0" y1="0" x2="-15" y2="15" stroke="#27ae60" stroke-width="2" opacity="0.5"/>
+    
+    <!-- Vector arrow -->
+    <defs>
+      <marker id="vector-arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+        <path d="M0,0 L0,6 L7,3 z" fill="#f39c12"/>
+      </marker>
+    </defs>
+    <line x1="0" y1="0" x2="18" y2="12" stroke="#f39c12" stroke-width="3" marker-end="url(#vector-arrow)"/>
+    <circle cx="0" cy="0" r="3" fill="#34495e"/>
+  </g>
+</svg>

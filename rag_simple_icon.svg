@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Database (R - Retrieval) -->
+  <g transform="translate(50, 100)">
+    <ellipse cx="0" cy="-8" rx="15" ry="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <rect x="-15" y="-8" width="30" height="16" fill="#e74c3c"/>
+    <ellipse cx="0" cy="8" rx="15" ry="5" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+  </g>
+  
+  <!-- Plus sign (A - Augmented) -->
+  <g transform="translate(100, 100)">
+    <circle r="20" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+    <path d="M -10,0 L 10,0 M 0,-10 L 0,10" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- AI/Brain (G - Generation) -->
+  <g transform="translate(150, 100)">
+    <circle r="20" fill="#27ae60" stroke="#229954" stroke-width="2"/>
+    <!-- Simple AI symbol -->
+    <text x="0" y="7" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="white" font-weight="bold">AI</text>
+  </g>
+  
+  <!-- Simple flow arrows -->
+  <path d="M 68,100 L 78,100" stroke="#34495e" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 122,100 L 128,100" stroke="#34495e" stroke-width="3" stroke-linecap="round"/>
+</svg>

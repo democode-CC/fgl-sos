@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect x="5" y="5" width="190" height="190" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" rx="5"/>
+  
+  <!-- Input Telecom Network Graph -->
+  <g transform="translate(40, 40)">
+    <!-- Base Station (Central node) -->
+    <circle cx="25" cy="25" r="8" fill="#e74c3c" stroke="#c0392b" stroke-width="2"/>
+    <path d="M 25,17 L 25,33 M 20,20 L 30,30 M 20,30 L 30,20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- Cell towers -->
+    <circle cx="0" cy="0" r="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <path d="M 0,-3 L 0,3 M -2,0 L 2,0" stroke="white" stroke-width="1"/>
+    
+    <circle cx="50" cy="0" r="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <path d="M 50,-3 L 50,3 M 48,0 L 52,0" stroke="white" stroke-width="1"/>
+    
+    <circle cx="0" cy="50" r="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <path d="M 0,47 L 0,53 M -2,50 L 2,50" stroke="white" stroke-width="1"/>
+    
+    <circle cx="50" cy="50" r="6" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+    <path d="M 50,47 L 50,53 M 48,50 L 52,50" stroke="white" stroke-width="1"/>
+    
+    <!-- User devices -->
+    <circle cx="10" cy="20" r="4" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+    <circle cx="40" cy="15" r="4" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+    <circle cx="15" cy="40" r="4" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+    <circle cx="35" cy="35" r="4" fill="#27ae60" stroke="#229954" stroke-width="1"/>
+    
+    <!-- Network connections -->
+    <line x1="8" y1="8" x2="17" y2="17" stroke="#95a5a6" stroke-width="1.5"/>
+    <line x1="42" y1="8" x2="33" y2="17" stroke="#95a5a6" stroke-width="1.5"/>
+    <line x1="8" y1="42" x2="17" y2="33" stroke="#95a5a6" stroke-width="1.5"/>
+    <line x1="42" y1="42" x2="33" y2="33" stroke="#95a5a6" stroke-width="1.5"/>
+    
+    <line x1="10" y1="20" x2="17" y2="22" stroke="#27ae60" stroke-width="1" opacity="0.6"/>
+    <line x1="40" y1="15" x2="33" y2="20" stroke="#27ae60" stroke-width="1" opacity="0.6"/>
+    <line x1="15" y1="40" x2="20" y2="33" stroke="#27ae60" stroke-width="1" opacity="0.6"/>
+    <line x1="35" y1="35" x2="30" y2="30" stroke="#27ae60" stroke-width="1" opacity="0.6"/>
+  </g>
+  
+  <!-- Processing Arrow -->
+  <defs>
+    <marker id="process-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <path d="M 100,65 L 120,65" stroke="#34495e" stroke-width="2" marker-end="url(#process-arrow)"/>
+  
+  <!-- GNN Processing -->
+  <g transform="translate(130, 65)">
+    <circle cx="0" cy="-8" r="3" fill="#9b59b6"/>
+    <circle cx="0" cy="0" r="3" fill="#9b59b6"/>
+    <circle cx="0" cy="8" r="3" fill="#9b59b6"/>
+    <circle cx="10" cy="-4" r="3" fill="#8e44ad"/>
+    <circle cx="10" cy="4" r="3" fill="#8e44ad"/>
+    <circle cx="20" cy="0" r="3" fill="#9b59b6"/>
+    
+    <line x1="3" y1="-8" x2="7" y2="-4" stroke="#9b59b6" stroke-width="0.8" opacity="0.5"/>
+    <line x1="3" y1="0" x2="7" y2="-4" stroke="#9b59b6" stroke-width="0.8" opacity="0.5"/>
+    <line x1="3" y1="8" x2="7" y2="4" stroke="#9b59b6" stroke-width="0.8" opacity="0.5"/>
+    <line x1="13" y1="-4" x2="17" y2="0" stroke="#9b59b6" stroke-width="0.8" opacity="0.5"/>
+    <line x1="13" y1="4" x2="17" y2="0" stroke="#9b59b6" stroke-width="0.8" opacity="0.5"/>
+  </g>
+  
+  <!-- Network Load Analysis Result -->
+  <g transform="translate(15, 110)">
+    <rect x="0" y="0" width="80" height="70" fill="#f8f9fa" stroke="#dfe6e9" stroke-width="1" rx="3"/>
+    <text x="40" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">Network Load</text>
+    
+    <!-- Load bars for different cells -->
+    <g transform="translate(10, 20)">
+      <rect x="0" y="0" width="60" height="6" fill="#ecf0f1" rx="3"/>
+      <rect x="0" y="0" width="48" height="6" fill="#e74c3c" rx="3"/>
+      <text x="0" y="-2" font-family="Arial, sans-serif" font-size="7" fill="#7f8c8d">Cell 1</text>
+      
+      <rect x="0" y="10" width="60" height="6" fill="#ecf0f1" rx="3"/>
+      <rect x="0" y="10" width="36" height="6" fill="#f39c12" rx="3"/>
+      <text x="0" y="8" font-family="Arial, sans-serif" font-size="7" fill="#7f8c8d">Cell 2</text>
+      
+      <rect x="0" y="20" width="60" height="6" fill="#ecf0f1" rx="3"/>
+      <rect x="0" y="20" width="42" height="6" fill="#f39c12" rx="3"/>
+      <text x="0" y="18" font-family="Arial, sans-serif" font-size="7" fill="#7f8c8d">Cell 3</text>
+      
+      <rect x="0" y="30" width="60" height="6" fill="#ecf0f1" rx="3"/>
+      <rect x="0" y="30" width="24" height="6" fill="#27ae60" rx="3"/>
+      <text x="0" y="28" font-family="Arial, sans-serif" font-size="7" fill="#7f8c8d">Cell 4</text>
+    </g>
+  </g>
+  
+  <!-- QoS Prediction Result -->
+  <g transform="translate(105, 110)">
+    <rect x="0" y="0" width="80" height="70" fill="#f8f9fa" stroke="#dfe6e9" stroke-width="1" rx="3"/>
+    <text x="40" y="12" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">QoS Prediction</text>
+    
+    <!-- Service quality metrics -->
+    <g transform="translate(10, 22)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">Latency: <tspan fill="#27ae60" font-weight="bold">12ms</tspan></text>
+      <text x="0" y="12" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">Packet Loss: <tspan fill="#27ae60" font-weight="bold">0.1%</tspan></text>
+      <text x="0" y="24" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">Throughput: <tspan fill="#f39c12" font-weight="bold">850Mbps</tspan></text>
+      <text x="0" y="36" font-family="Arial, sans-serif" font-size="8" fill="#2c3e50">Jitter: <tspan fill="#27ae60" font-weight="bold">2ms</tspan></text>
+    </g>
+  </g>
+  
+  <!-- Anomaly Detection -->
+  <g transform="translate(15, 15)">
+    <rect x="110" y="0" width="70" height="35" fill="#fff5f5" stroke="#e74c3c" stroke-width="1" rx="3"/>
+    <circle cx="125" cy="17" r="8" fill="#e74c3c" opacity="0.2"/>
+    <text x="125" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#e74c3c" font-weight="bold">!</text>
+    <text x="150" y="14" font-family="Arial, sans-serif" font-size="8" fill="#c0392b">Anomaly</text>
+    <text x="150" y="24" font-family="Arial, sans-serif" font-size="8" fill="#c0392b">Node 3</text>
+  </g>
+  
+  <!-- Performance Score -->
+  <g transform="translate(160, 65)">
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#ecf0f1" stroke-width="4"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#27ae60" stroke-width="4" 
+            stroke-dasharray="105.7 19.8" stroke-dashoffset="26.4" transform="rotate(-90)"/>
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60" font-weight="bold">Network</text>
+    <text x="0" y="10" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60" font-weight="bold">Health</text>
+    <text x="0" y="-10" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#27ae60" font-weight="bold">89%</text>
+  </g>
+</svg>

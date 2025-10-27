@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#f8f9fa" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- One-hot vector representation -->
+  <g transform="translate(100, 100)">
+    <!-- Left bracket -->
+    <path d="M -25,-60 L -30,-60 L -30,60 L -25,60" fill="none" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Right bracket -->
+    <path d="M 25,-60 L 30,-60 L 30,60 L 25,60" fill="none" stroke="#2c3e50" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- One-hot values -->
+    <text x="0" y="-45" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f8c8d" font-weight="bold">0</text>
+    <text x="0" y="-25" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f8c8d" font-weight="bold">0</text>
+    <text x="0" y="-5" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#e74c3c" font-weight="bold">1</text>
+    <text x="0" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f8c8d" font-weight="bold">0</text>
+    <text x="0" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f8c8d" font-weight="bold">0</text>
+    <text x="0" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#7f8c8d" font-weight="bold">0</text>
+  </g>
+</svg>
